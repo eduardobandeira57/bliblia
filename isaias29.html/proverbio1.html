@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="data:image/jpeg;base64,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">
+    <title>edu.app</title>
+    <style>
+        body{
+            background-color: rgb(207, 242, 242);
+        
+             
+        }
+        h1{
+            margin-top: -10px;
+            margin-right: 30px;
+            left: 25px ;
+           } 
+
+        .contener{
+           position: absolute;
+            margin-top: 0px;
+            width: 350px;
+            display:flex;
+            flex-direction: row;
+        }
+
+        .id{
+            color: crimson;
+            margin-top: -15px;
+            font-size: 15px;
+          }
+
+           .apagar{
+            background-color: rgb(245, 13, 102);
+            font-size: 25px;
+            
+            
+           }
+           table{
+            margin-top: -10;
+           }
+          td{
+            margin-top: -10px;
+            display:flex;
+            flex-wrap: wrap;
+
+          }
+          p{
+            margin-top: -5px;
+            display:flex;
+            flex-wrap: wrap;
+          }
+          #paralelo{
+            position: absolute;
+            margin-top: 50px;
+            background-color: rgb(17, 235, 235);
+            opacity: 90%;
+          }
+          marquee{
+            font-size: 35px;
+          }
+          p{
+            font-size: 20px;
+          }
+          .ref{
+            position: absolute;
+            margin-top: 270%;
+            margin-left: 15px;
+           
+            font-size: 25px;
+            width: 300px;
+          }
+        
+    </style>
+</head>
+<body>
+    <marquee behavior="" direction="">Edu.app </marquee>
+    
+
+    <h1>Proverbio 1</h1><br>
+    <div class="contener" >
+            
+                <table>
+                    <td><p >1 Provérbios de Salomão, filho de Davi, rei de Israel;</p><p class="id" onclick="para2()"> Referencia>> </p></td>
+                    <td><p>2 Para se conhecer a sabedoria e a instrução; para se entenderem, as palavras da prudência. </p><p class="id" onclick="para3()"></p></td>
+                    <td><p>3 Para se receber a instrução do entendimento, a justiça, o juízo e a eqüidade;</p><pc class="id" onclick="para4()"></p></td> 
+                    <td><p>4 Para dar aos simples, prudência, e aos moços, conhecimento e bom siso;<p class="id" onclick="para5()"></p></p></td>
+                    <td><p>5 O sábio ouvirá e crescerá em conhecimento, e o entendido adquirirá sábios conselhos;<p class="id" onclick="para6()">Referencia>></p></p></td>
+                    <td><p>6 Para entender os provérbios e sua interpretação; as palavras dos sábios e as suas proposições.</p><p class="id" onclick="para7()">Referencia>></p></td>
+                    <td><p>7 O temor do Senhor é o princípio do conhecimento; os loucos desprezam a sabedoria e a instrução.</p><p class="id" onclick="para8()">Referencia>></p></td>
+                    <td><p>8 Filho meu, ouve a instrução de teu pai, e não deixes o ensinamento de tua mãe,</p><p class="id" onclick="para9()"></p></td>
+                    <td><p>9 Porque serão como diadema gracioso em tua cabeça, e colares ao teu pescoço.</p><p class="id" onclick="para10()"></p></td>
+                    <td><p>10 Filho meu, se os pecadores procuram te atrair com agrados, não aceites.</p><p class="id" onclick="para11()">Referencia>></p></td>
+                    <td><p>11 Se disserem: Vem conosco a tocaias de sangue; embosquemos o inocente sem motivo;</p><p class="id" onclick="para12()">Referencia>></p></td>
+                    <td><p>12 Traguemo-los vivos, como a sepultura; e inteiros, como os que descem à cova;</p><p class="id" onclick="para13()">Referencia>></p></td>
+                    <td><p>13 Acharemos toda sorte de bens preciosos; encheremos as nossas casas de despojos;</p><p class="id" onclick="para14()"></p></td>
+                    <td><p>14 Lança a tua sorte conosco; teremos todos uma só bolsa!</p><p class="id" onclick="para15()"></p></td>
+                    <td><p>15 Filho meu, não te ponhas a caminho com eles; desvia o teu pé das suas veredas;</p><p class="id" onclick="para16()">Referencia>></p></td>
+                    <td><p>16 Porque os seus pés correm para o mal, e se apressam a derramar sangue.</p><p class="id" onclick="para17()">Referencia>></p></td>
+                    <td><p>17 Na verdade é inútil estender-se a rede ante os olhos de qualquer ave.</p><p class="id" onclick="para18()">Referencia>></p></td>
+                    <td><p>18 No entanto estes armam ciladas contra o seu próprio sangue; e espreitam suas próprias vidas.</p><p class="id" onclick="para19()"></p></td>
+                    <td><p>19 São assim as veredas de todo aquele que usa de cobiça: ela põe a perder a alma dos que a possuem.</p><p class="id" onclick="para20()">Referencia>></p></td>
+                    <td><p>20 A sabedoria clama lá fora; pelas ruas levanta a sua voz</p><p class="id" onclick="para21()">Referencia>></p></td>
+                    <td><p>21 Nas esquinas movimentadas ela brada; nas entradas das portas e nas cidades profere as suas palavras:</p><p class="id" onclick="para22()"></p></td>
+                    <td><p>22 Até quando, ó simples, amareis a simplicidade? E vós escarnecedores, desejareis o escárnio? E vós insensatos, odiareis o conhecimento?</p><p class="id" onclick="para23()">Referencia>></p></td>
+                    <td><p>23 Atentai para a minha repreensão; pois eis que vos derramarei abundantemente do meu espírito e vos farei saber as minhas palavras.</p><p class="id" onclick="para24()">Referencia>></p></td>
+                    <td><p>24 Entretanto, porque eu clamei e recusastes; e estendi a minha mão e não houve quem desse atenção, </p><p class="id" onclick="para25()">Referencia>></p></td>
+                    <td><p>25 Antes rejeitastes todo o meu conselho, e não quisestes a minha repreensão,</p><p class="id" onclick="para26()">Referencia>></p></td>
+                    <td><p>26 Também de minha parte eu me rirei na vossa perdição e zombarei, em vindo o vosso temor.</p><p class="id" onclick="para27()">Referencia>></p></td>
+                    <td><p>27 Vindo o vosso temor como a assolação, e vindo a vossa perdição como uma tormenta, sobrevirá a vós aperto e angústia.</p><p class="id" onclick="para28()">Referencia>></p></td>
+                    <td><p>28 Então clamarão a mim, mas eu não responderei; de madrugada me buscarão, porém não me acharão.</p><p class="id" onclick="para29()">Referencia>></p></td>
+                    <td><p>29 Porquanto odiaram o conhecimento; e não preferiram o temor do Senhor:</p><p class="id" onclick="para30()">Referencia>></p></td>
+                    <td><p>30 Não aceitaram o meu conselho, e desprezaram toda a minha repreensão.</p><p class="id" onclick="para31()">Referencia>></p></td>
+                    <td><p>31 Portanto comerão do fruto do seu caminho, e fartar-se-ão dos seus próprios conselhos.</p><p class="id" onclick="para32()">Referencia>></p></td>
+                    <td><p>32 Porque o erro dos simples os matará, e o desvario dos insensatos os destruirá.</p><p class="id" onclick="para33()">Referencia>></p></td>
+                    <td><p>33 Mas o que me der ouvidos habitará em segurança, e estará livre do temor do mal.</p><p class="id" onclick="para34()">Referencia>></p></td>
+             
+
+                
+                 
+                </table>
+              
+    </div>
+    
+               <div id="paralelo">
+                <br>
+                <p class="v0"></p>
+                  <p class="v1"></p>
+                  <p class="v2"></p>
+                 <p class="v3"></p>
+                 <p class="v4"></p>
+                 <p class="v5"></p>
+                 <p class="v6"></p>
+                 <p class="apagar" onclick="apagar()"></p>
+                 <p class="voz" onclick="voz()"></p>
+                 
+
+                </div>
+                <a class="ref" href="index.html">Inicio</a>
+
+                <div>
+                  
+                </div>
+    
+       <script>
+       function para1(){
+        let mv0=""
+        let mv1=""
+        let mv2=""
+        let mv3=""
+
+
+        
+        document.getElementById("paralelo").style.marginTop = "-10px";
+  
+        document.querySelector(".v1").textContent=mv1
+        document.querySelector(".v0").textContent=mv0
+        document.querySelector(".v2").textContent=mv2
+        document.querySelector(".v3").textContent=mv3
+        document.querySelector(".apagar").textContent="<< Voltar"
+       
+    };
+
+    function busc(){
+          
+    }
+
+
+
+
+    function para2(){
+
+      document.getElementById("paralelo").style.marginTop = "50px";
+       let voz= document.querySelector(".v1").textContent="Eclesiaste 12;9 E, quanto mais sábio foi o pregador, tanto mais ensinou ao povo sabedoria; e atentando, e esquadrinhando, compôs muitos provérbios."
+        document.querySelector(".v0").textContent="1 Reis 4;32 E disse três mil provérbios, e foram os seus cânticos mil e cinco."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".apagar").textContent="<< Voltar"
+        
+      
+    }
+    function para3(){
+
+      document.getElementById("paralelo").style.marginTop = "80px";
+        document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent=""
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+        document.querySelector(".apagar").textContent="<< Voltar"
+
+    } 
+    function para4(){
+      document.getElementById("paralelo").style.marginTop = "130px";
+      document.querySelector(".v1").textContent=" "
+        document.querySelector(".v0").textContent=""
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+        document.querySelector(".apagar").textContent="<< Voltar"
+
+    }
+    function para5(){
+      document.getElementById("paralelo").style.marginTop = "160px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent=""
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+        document.querySelector(".apagar").textContent="<< Voltar"
+
+    }
+    function para6(){
+      document.getElementById("paralelo").style.marginTop = "190px";
+      document.querySelector(".v1").textContent="Mateus 13;12 Porque àquele que tem, se dará, e terá em abundância; mas àquele que não tem, até aquilo que tem lhe será tirado. "
+        document.querySelector(".v0").textContent="Proverbio 9;9 Dá instrução ao sábio, e ele se fará mais sábio; ensina o justo e ele aumentará em entendimento."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+        document.querySelector(".apagar").textContent="<< Voltar"
+
+    }
+    function para7(){
+      document.getElementById("paralelo").style.marginTop = "300px";
+      document.querySelector(".v1").textContent="Salmos 78;2 Abrirei a minha boca numa parábola; falarei enigmas da antiguidade."
+        document.querySelector(".v0").textContent="Juizes 14;12 Disse-lhes, pois, Sansão: Eu vos darei um enigma para decifrar; e, se nos sete dias das bodas o decifrardes e descobrirdes, eu vos darei trinta lençóis e trinta mudas de roupas."
+        document.querySelector(".v2").textContent="Numeros 21;27 Por isso dizem os que falam em provérbios: Vinde a Hesbom; edifique-se e estabeleça-se a cidade de Siom."
+        document.querySelector(".v3").textContent="Mateus 13;35 Para que se cumprisse o que fora dito pelo profeta, que disse: Abrirei em parábolas a minha boca; Publicarei coisas ocultas desde a fundação do mundo."
+        document.querySelector(".v4").textContent="Romanos16;25 Ora, àquele que é poderoso para vos confirmar segundo o meu evangelho e a pregação de Jesus Cristo, conforme a revelação do mistério que desde tempos eternos esteve oculto,"
+        document.querySelector(".v5").textContent="Romanos16;26 Mas que se manifestou agora, e se notificou pelas Escrituras dos profetas, segundo o mandamento do Deus eterno, a todas as nações para obediência da fé;"
+        document.querySelector(".v6").textContent=""
+
+
+      document.querySelector(".apagar").textContent="<< Voltar"
+
+    }
+    function para8(){
+      document.getElementById("paralelo").style.marginTop = "360px";
+      document.querySelector(".v1").textContent="Deuteronômio 4;6 Guardai-os pois, e cumpri-os, porque isso será a vossa sabedoria e o vosso entendimento perante os olhos dos povos, que ouvirão todos estes estatutos, e dirão: Este grande povo é nação sábia e entendida."
+        document.querySelector(".v0").textContent="Jó 28;28 E disse ao homem: Eis que o temor do Senhor é a sabedoria, e apartar-se do mal é a inteligência."
+        document.querySelector(".v2").textContent="Eclesiastes 12;13 De tudo o que se tem ouvido, o fim é: Teme a Deus, e guarda os seus mandamentos; porque isto é o dever de todo o homem."
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+      document.querySelector(".apagar").textContent="<< Voltar"
+
+
+    }
+    function para9(){
+      document.getElementById("paralelo").style.marginTop = "800px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent=""
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para10(){
+      document.getElementById("paralelo").style.marginTop = "900px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent=""
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para11(){
+      document.getElementById("paralelo").style.marginTop = "470px";
+      document.querySelector(".v1").textContent="Efésios 5;11 E não comuniqueis com as obras infrutuosas das trevas, mas antes condenai-as."
+        document.querySelector(".v0").textContent="Gênesis 39;7 E aconteceu depois destas coisas que a mulher do seu senhor pôs os seus olhos em José, e disse: Deita-te comigo."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=" "
+        document.querySelector(".v4").textContent=" "
+        document.querySelector(".v5").textContent="  "
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para12(){
+      document.getElementById("paralelo").style.marginTop = "550px";
+      document.querySelector(".v1").textContent="Jeremias 5;26 Porque ímpios se acham entre o meu povo; andam espiando, como quem arma laços; põem armadilhas, com que prendem os homens."
+        document.querySelector(".v0").textContent="Salmos 10;8 Põe-se de emboscada nas aldeias; nos lugares ocultos mata o inocente; os seus olhos estão ocultamente fixos sobre o pobre."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para13(){
+      document.getElementById("paralelo").style.marginTop = "650px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Salmos 124;3 Eles então nos teriam engolido vivos, quando a sua ira se acendeu contra nós."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para14(){
+      document.getElementById("paralelo").style.marginTop = "1400px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent=""
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para15(){
+      document.getElementById("paralelo").style.marginTop = "1580px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent=""
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<<Voltar"
+    }
+    function para16(){
+      document.getElementById("paralelo").style.marginTop = "850px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="salmos 1;1 Bem-aventurado o homem que não anda segundo o conselho dos ímpios, nem se detém no caminho dos pecadores, nem se assenta na roda dos escarnecedores."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para17(){
+      document.getElementById("paralelo").style.marginTop = "890px";
+      document.querySelector(".v1").textContent="Romanos 3;15 Os seus pés são ligeiros para derramar sangue."
+        document.querySelector(".v0").textContent="salmos 59;7 Eis que eles dão gritos com as suas bocas; espadas estão nos seus lábios, porque, dizem eles: Quem ouve?"
+        document.querySelector(".v2").textContent=" "
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para18(){
+      document.getElementById("paralelo").style.marginTop = "930px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v2").textContent=" "
+        document.querySelector(".v0").textContent=" Jó 40;24 Podê-lo-iam porventura caçar à vista de seus olhos, ou com laços lhe furar o nariz?"
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para19(){
+      document.getElementById("paralelo").style.marginTop = "1980px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent=""
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para20(){
+      document.getElementById("paralelo").style.marginTop = "1130px";
+      document.querySelector(".v1").textContent="1 Timóteo 6;10 Porque o amor ao dinheiro é a raiz de toda a espécie de males; e nessa cobiça alguns se desviaram da fé, e se traspassaram a si mesmos com muitas dores."
+        document.querySelector(".v0").textContent="Jó 8;13 Assim são as veredas de todos quantos se esquecem de Deus; e a esperança do hipócrita perecerá."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+
+    function para21(){
+      document.getElementById("paralelo").style.marginTop = "1230px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="João 7;37 E no último dia, o grande dia da festa, Jesus pôs-se em pé, e clamou, dizendo: Se alguém tem sede, venha a mim, e beba."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para22(){
+      document.getElementById("paralelo").style.marginTop = "1320px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent=""
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para23(){
+      document.getElementById("paralelo").style.marginTop = "1430px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Jó 21;14 E, todavia, dizem a Deus: Retira-te de nós; porque não desejamos ter conhecimento dos teus caminhos."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para24(){
+      document.getElementById("paralelo").style.marginTop = "1480px";
+      document.querySelector(".v1").textContent="Atos 2;17 E nos últimos dias acontecerá, diz Deus, Que do meu Espírito derramarei sobre toda a carne; E os vossos filhos e as vossas filhas profetizarão, Os vossos jovens terão visões, E os vossos velhos sonharão sonhos;"
+        document.querySelector(".v0").textContent="Joel 2;28 E há de ser que, depois derramarei o meu Espírito sobre toda a carne, e vossos filhos e vossas filhas profetizarão, os vossos velhos terão sonhos, os vossos jovens terão visões."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para25(){
+      document.getElementById("paralelo").style.marginTop = "1580px";
+      document.querySelector(".v1").textContent="Jeremias 7;13 Agora, pois, porquanto fazeis todas estas obras, diz o Senhor, e eu vos falei, madrugando, e falando, e não ouvistes, e chamei-vos, e não respondestes,"
+        document.querySelector(".v0").textContent="Isaías 65;12 Também vos destinareis à espada, e todos vos encurvareis à matança; porquanto chamei, e não respondestes; falei, e não ouvistes; mas fizestes o que era mau aos meus olhos, e escolhestes aquilo em que não tinha prazer."
+        document.querySelector(".v2").textContent="Romanos 10;21 Mas para Israel diz:Todo o dia estendi as minhas mãos a um povo rebelde e contradizente."
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para26(){
+      document.getElementById("paralelo").style.marginTop = "1680px";
+      document.querySelector(".v1").textContent="Lucas 7;30 Mas os fariseus e os doutores da lei rejeitaram o conselho de Deus contra si mesmos, não tendo sido batizados por ele."
+        document.querySelector(".v0").textContent="Salmos 81;11 Mas o meu povo não quis ouvir a minha voz, e Israel não me quis."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para27(){
+      document.getElementById("paralelo").style.marginTop = "1780px";
+      document.querySelector(".v1").textContent="Jeremias 48;43 Temor, e cova, e laço, vêm sobre ti, ó morador de Moabe, diz o Senhor."
+        document.querySelector(".v0").textContent="Salmos 2;4 Aquele que habita nos céus se rirá; o Senhor zombará deles."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para28(){
+      document.getElementById("paralelo").style.marginTop = "1880px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Sofonias 1;15 Aquele dia será um dia de indignação, dia de tribulação e de angústia, dia de alvoroço e de assolação, dia de trevas e de escuridão, dia de nuvens e de densas trevas,"
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para29(){
+      document.getElementById("paralelo").style.marginTop = "1980px";
+      document.querySelector(".v1").textContent="Jeremias 11;11 Portanto assim diz o Senhor: Eis que trarei mal sobre eles, de que não poderão escapar; e clamarão a mim, mas eu não os ouvirei."
+        document.querySelector(".v0").textContent="1 Samuel 8;18 Então naquele dia clamareis por causa do vosso rei, que vós houverdes escolhido; mas o Senhor não vos ouvirá naquele dia."
+        document.querySelector(".v2").textContent="Tiago 4;3 Pedis, e não recebeis, porque pedis mal, para o gastardes em vossos deleites"
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para30(){
+      document.getElementById("paralelo").style.marginTop = "2080px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Jó 21;14 E, todavia, dizem a Deus: Retira-te de nós; porque não desejamos ter conhecimento dos teus caminhos."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para31(){
+      document.getElementById("paralelo").style.marginTop = "2180px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Salmos 81;11 Mas o meu povo não quis ouvir a minha voz, e Israel não me quis."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para32(){
+      document.getElementById("paralelo").style.marginTop = "2270px";
+      document.querySelector(".v1").textContent="Jeremias 6;19 Ouve tu, ó terra! Eis que eu trarei mal sobre este povo, o próprio fruto dos seus pensamentos; porque não estão atentos às minhas palavras, e rejeitam a minha lei"
+        document.querySelector(".v0").textContent="Isaías 3;11 Ai do ímpio! Mal lhe irá; porque se lhe fará o que as suas mãos fizeram."
+        document.querySelector(".v2").textContent="Jó 4;8 Segundo eu tenho visto, os que lavram iniqüidade, e semeiam mal, segam o mesmo."
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para33(){
+      document.getElementById("paralelo").style.marginTop = "2460px";
+      document.querySelector(".v1").textContent="Jeremias 2;19 A tua malícia te castigará, e as tuas apostasias te repreenderão; sabe, pois, e vê, que mal e quão amargo é deixares ao SENHOR teu Deus, e não teres em ti o meu temor, diz o Senhor DEUS dos Exércitos."
+        document.querySelector(".v0").textContent="Salmos 73;18 Certamente tu os puseste em lugares escorregadios; tu os lanças em destruição. 19 Como caem na desolação, quase num momento! Ficam totalmente consumidos de terrores."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para34(){
+      document.getElementById("paralelo").style.marginTop = "2560px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Salmos 25;12 Qual é o homem que teme ao Senhor? Ele o ensinará no caminho que deve escolher.13 A sua alma pousará no bem, e a sua semente herdará a terra."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+
+    function apagar(){
+     
+     document.querySelector(".v1").textContent=""
+     document.querySelector(".v0").textContent=""
+     document.querySelector(".v2").textContent=""
+     document.querySelector(".v3").textContent=""
+     document.querySelector(".v4").textContent=""
+     document.querySelector(".v5").textContent=""
+     document.querySelector(".v6").textContent=""
+     document.querySelector(".apagar").textContent=""
+    
+
+
+
+ }
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

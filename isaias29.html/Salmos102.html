@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="data:image/jpeg;base64,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">
+    <title>Estudo Salmos 102</title>
+    <style>
+        body{
+            background-color: rgb(207, 242, 242);
+        
+             
+        }
+        h1{
+            margin-top: -10px;
+            margin-right: 30px;
+            left: 25px ;
+           } 
+
+        .contener{
+           position: absolute;
+            margin-top: 0px;
+            width: 350px;
+            display:flex;
+            flex-direction: row;
+        }
+
+        .id{
+            color: crimson;
+            margin-top: -15px;
+            font-size: 30px;
+          }
+
+           .apagar{
+            background-color: rgb(245, 13, 102);
+            font-size: 25px;
+            
+            
+           }
+           table{
+            margin-top: -10;
+           }
+          td{
+            margin-top: -10px;
+            display:flex;
+            flex-wrap: wrap;
+
+          }
+          p{
+            margin-top: -5px;
+            display:flex;
+            flex-wrap: wrap;
+          }
+          #paralelo{
+            position: absolute;
+            margin-top: 50px;
+            background-color: rgb(17, 235, 235);
+            opacity: 90%;
+          }
+          marquee{
+            font-size: 35px;
+          }
+          .ref{
+            position: absolute;
+            margin-top: 210%;
+            margin-left: 15px;
+           
+            font-size: 25px;
+            width: 300px;
+          }
+        
+    </style>
+</head>
+<body>
+    <marquee behavior="" direction="">Edu.app Estudo Salmos 102</marquee><br><br>
+    
+
+    <h1>Salmos 102</h1><br>
+    <div class="contener" >
+            
+                <table>
+                    <td><p >1 SENHOR, ouve a minha oração, e chegue a ti o meu clamor.</p><p class="id" onclick="para1()"> + </p></td>
+                    <td><p> 2 Não escondas de mim o teu rosto no dia da minha angústia, inclina para mim os teus ouvidos; no dia em que eu clamar, ouve-me depressa.</p><p class="id" onclick="para2()"> + </p></td>
+                    <td><p>3 Porque os meus dias se consomem como a fumaça, e os meus ossos ardem como lenha  </p><p class="id" onclick="para3()">+</p></td>
+                    <td><p>4 O meu coração está ferido e seco como a erva, por isso me esqueço de comer o meu pão. </p><pc class="id" onclick="para4()">+</p></td> 
+                    <td><p>5 Por causa da voz do meu gemido os meus ossos se apegam à minha pele.<p class="id" onclick="para5()">+</p></p></td>
+                    <td><p>6 Sou semelhante ao pelicano no deserto; sou como um mocho nas solidões.<p class="id" onclick="para6()">+</p></p></td>
+                    <td><p>7 Vigio, sou como o pardal solitário no telhado.</p><p class="id" onclick="para7()">+</p></td>
+                    <td><p>8 Os meus inimigos me afrontam todo o dia; os que se enfurecem contra mim têm jurado contra mim.</p><p class="id" onclick="para8()">+</p></td>
+                    <td><p>9 Pois tenho comido cinza como pão, e misturado com lágrimas a minha bebida, </p><p class="id" onclick="para9()">+</p></td>
+                    <td><p>10 Por causa da tua ira e da tua indignação, pois tu me levantaste e me arremessaste.</p><p class="id" onclick="para10()">+</p></td>
+                    <td><p>11 Os meus dias são como a sombra que declina, e como a erva me vou secando.</p><p class="id" onclick="para11()">+</p></td>
+                    <td><p>12 Mas tu, Senhor, permanecerás para sempre, a tua memória de geração em geração.</p><p class="id" onclick="para12()">+</p></td>
+                    <td><p>13 Tu te levantarás e terás piedade de Sião; pois o tempo de te compadeceres dela, o tempo determinado, já chegou.</p><p class="id" onclick="para13()">+</p></td>
+                    <td><p>14 Porque os teus servos têm prazer nas suas pedras, e se compadecem do seu pó.</p><p class="id" onclick="para14()">+</p></td>
+                    <td><p>15 Então os gentios temerão o nome do Senhor, e todos os reis da terra a tua glória. </p><p class="id" onclick="para15()">+</p></td>
+                    <td><p>16 Quando o Senhor edificar a Sião, aparecerá na sua glória.</p><p class="id" onclick="para16()">+</p></td>
+                    <td><p>17 Ele atenderá à oração do desamparado, e não desprezará a sua oração.</p><p class="id" onclick="para17()">+</p></td>
+                    <td><p>18 Isto se escreverá para a geração futura; e o povo que se criar louvará ao Senhor.</p><p class="id" onclick="para18()">+</p></td>
+                    <td><p>19 Pois olhou desde o alto do seu santuário, desde os céus o Senhor contemplou a terra,</p><p class="id" onclick="para19()">+</p></td>
+                    <td><p>20 Para ouvir o gemido dos presos, para soltar os sentenciados à morte;</p><p class="id" onclick="para20()">+</p></td>
+                    <td><p>21 Para anunciarem o nome do Senhor em Sião, e o seu louvor em Jerusalém,</p><p class="id" onclick="para21()">+</p></td>
+                    <td><p>22 Quando os povos se ajuntarem, e os reinos, para servirem ao Senhor.</p><p class="id" onclick="para22()">+</p></td>
+                    <td><p>23 Abateu a minha força no caminho; abreviou os meus dias.</p><p class="id" onclick="para23()">+</p></td>
+                    <td><p>24 Dizia eu: Meu Deus, não me leves no meio dos meus dias, os teus anos são por todas as gerações.</p><p class="id" onclick="para24()">+</p></td>
+                
+             
+
+                
+                 
+                </table>
+              
+    </div>
+    
+               <div id="paralelo">
+                <br>
+                <p class="v0" onclick="busc()"></p>
+                  <p class="v1"></p>
+                  <p class="v2"></p>
+                 <p class="v3"></p>
+                 <p class="v4"></p>
+                 <p class="v5"></p>
+                 <p class="v6"></p>
+                 <p class="apagar" onclick="apagar()"></p>
+                 <p class="voz" onclick="voz()"></p>
+                 
+
+                </div>
+                <a class="ref" href="index.html">Inicio</a>
+    
+       <script>
+       function para1(){
+        let mv0="Êxodo 2:23,24 E aconteceu, depois de muitos dias, que morrendo o rei do Egito, os filhos de Israel suspiraram por causa da servidão, e clamaram; e o seu clamor subiu a Deus por causa de sua servidão.²⁴ E ouviu Deus o seu gemido, e lembrou-se Deus da sua aliança com Abraão, com Isaque, e com Jacó;"
+        let mv1="1 Samuel 9:16 Amanhã a estas horas te enviarei um homem da terra de Benjamim, o qual ungirás por capitão sobre o meu povo de Israel, e ele livrará o meu povo da mão dos filisteus; porque tenho olhado para o meu povo; porque o seu clamor chegou a mim."
+        let mv2=""
+        let mv3=""
+
+
+        
+        document.getElementById("paralelo").style.marginTop = "-10px";
+  
+        document.querySelector(".v1").textContent=mv1
+        document.querySelector(".v0").textContent=mv0
+        document.querySelector(".v2").textContent=mv2
+        document.querySelector(".v3").textContent=mv3
+        document.querySelector(".apagar").textContent="<< Voltar"
+       
+    };
+
+    function busc(){
+          
+    }
+
+
+
+
+    function para2(){
+
+      document.getElementById("paralelo").style.marginTop = "50px";
+       document.querySelector(".v1").textContent="Salmos 18:1-3 Eu te amarei, ó SENHOR, fortaleza minha.2 O Senhor é o meu rochedo, e o meu lugar forte, e o meu libertador; o meu Deus, a minha fortaleza, em quem confio; o meu escudo, a força da minha salvação, e o meu alto refúgio.3 Invocarei o nome do Senhor, que é digno de louvor, e ficarei livre dos meus inimigos. "
+        document.querySelector(".v0").textContent="2 Samuel 18:5-7 E o rei deu ordem a Joabe, e a Abisai, e a Itai, dizendo: Brandamente tratai, por amor de mim, ao jovem Absalão. E todo o povo ouviu quando o rei deu ordem a todos os capitães acerca de Absalão.6º Saiu, pois, o povo ao campo, a encontrar-se com Israel, e deu-se a batalha no bosque de Efraim.7 E ali foi ferido o povo de Israel, diante dos servos de Davi; e naquele mesmo dia houve ali uma grande derrota de vinte mil."
+        document.querySelector(".v2").textContent="Salmos 27:8-10) 8 Quando tu disseste: Buscai o meu rosto; o meu coração disse a ti: O teu rosto, Senhor, buscarei.9 Não escondas de mim a tua face, não rejeites ao teu servo com ira; tu foste a minha ajuda, não me deixes nem me desampares, ó Deus da minha salvação.10 Porque, quando meu pai e minha mãe me desampararem, o Senhor me recolherá. "
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".apagar").textContent="<< Voltar"
+        
+      
+    }
+    function para3(){
+
+      document.getElementById("paralelo").style.marginTop = "80px";
+        document.querySelector(".v1").textContent="Lamentações 1:12-14) 12 Não vos comove isto a todos vós que passais pelo caminho? Atendei, e vede, se há dor como a minha dor, que veio sobre mim, com que o Senhor me afligiu, no dia do furor da sua ira.13 Desde o alto enviou fogo a meus ossos, o qual se assenhoreou deles; estendeu uma rede aos meus pés, fez-me voltar para trás, fez-me assolada e enferma todo o dia.14 O jugo das minhas transgressões está atado pela sua mão; elas estão entretecidas, subiram sobre o meu pescoço, e ele abateu a minha força; entregou-me o Senhor nas mãos daqueles a quem não posso resistir."
+        document.querySelector(".v0").textContent="Jó 30:26-31) 26 Todavia aguardando eu o bem, então me veio o mal, esperando eu a luz, veio a escuridão.27 As minhas entranhas fervem e não estão quietas; os dias da aflição me surpreendem.28 Denegrido ando, porém não do sol; levantando-me na congregação, clamo por socorro.29 Irmão me fiz dos chacais, e companheiro dos avestruzes.30 Enegreceu-se a minha pele sobre mim, e os meus ossos estão queimados do calor.31 A minha harpa se tornou em luto, e o meu órgão em voz dos que choram."
+        document.querySelector(".v2").textContent="Tiago 4:12-14) ¹² Há só um legislador que pode salvar e destruir. Tu, porém, quem és, que julgas a outrem?¹³ Eia agora vós, que dizeis: Hoje, ou amanhã, iremos a tal cidade, e lá passaremos um ano, e contrataremos, e ganharemos;¹⁴ Digo-vos que não sabeis o que acontecerá amanhã. Porque, que é a vossa vida? É um vapor que aparece por um pouco, e depois se desvanece. "
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+        document.querySelector(".apagar").textContent="<< Voltar"
+
+    } 
+    function para4(){
+      document.getElementById("paralelo").style.marginTop = "130px";
+      document.querySelector(".v1").textContent="1 Reis 21:3-5) ³ Porém Nabote disse a Acabe: Guarde-me o Senhor de que eu te dê a herança de meus pais.⁴ Então Acabe veio desgostoso e indignado à sua casa, por causa da palavra que Nabote, o jizreelita, lhe falara, quando disse: Não te darei a herança de meus pais. E deitou-se na sua cama, e voltou o rosto, e não comeu pão.⁵ Porém, vindo a ele Jezabel, sua mulher, lhe disse: Que há, que está tão desgostoso o teu espírito, e não comes pão? "
+        document.querySelector(".v0").textContent="1 Samuel 1:6-8) ⁶ E a sua rival excessivamente a provocava, para a irritar; porque o Senhor lhe tinha cerrado a madre.⁷ E assim fazia ele de ano em ano. Sempre que Ana subia à casa do Senhor, a outra a irritava; por isso chorava, e não comia.⁸ Então Elcana, seu marido, lhe disse: Ana, por que choras? E por que não comes? E por que está mal o teu coração? Não te sou eu melhor do que dez filhos?"
+        document.querySelector(".v2").textContent="Tiago 1:10-12) ¹⁰ E o rico em seu abatimento; porque ele passará como a flor da erva.¹¹ Porque sai o sol com ardor, e a erva seca, e a sua flor cai, e a formosa aparência do seu aspecto perece; assim se murchará também o rico em seus caminhos.¹² Bem-aventurado o homem que sofre a tentação; porque, quando for provado, receberá a coroa da vida, a qual o Senhor tem prometido aos que o amam. "
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+        document.querySelector(".apagar").textContent="<< Voltar"
+
+    }
+    function para5(){
+      document.getElementById("paralelo").style.marginTop = "160px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Jó 19:19-21)¹⁹ Todos os homens da minha confidência me abominam, e até os que eu amava se tornaram contra mim.²⁰ Os meus ossos se apegaram à minha pele e à minha carne, e escapei só com a pele dos meus dentes.²¹ Compadecei-vos de mim, amigos meus, compadecei-vos de mim, porque a mão de Deus me tocou."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+        document.querySelector(".apagar").textContent="<< Voltar"
+
+    }
+    function para6(){
+      document.getElementById("paralelo").style.marginTop = "190px";
+      document.querySelector(".v1").textContent="Sofonias 2:14) ¹⁴ E no meio dela repousarão os rebanhos, todos os animais das nações; e alojar-se-ão nos seus capitéis assim o pelicano como o ouriço; o canto das aves se ouvirá nas janelas; e haverá desolação nos limiares, quando tiver descoberto a sua obra de cedro. "
+        document.querySelector(".v0").textContent="Jó 30:28-31) ²⁸ Denegrido ando, porém não do sol; levantando-me na congregação, clamo por socorro.²⁹ Irmão me fiz dos chacais, e companheiro dos avestruzes.³⁰ Enegreceu-se a minha pele sobre mim, e os meus ossos estão queimados do calor.³¹ A minha harpa se tornou em luto, e o meu órgão em voz dos que choram."
+        document.querySelector(".v2").textContent="Isaías 34:10-12) ¹⁰ Nem de noite nem de dia se apagará; para sempre a sua fumaça subirá; de geração em geração será assolada; pelos séculos dos séculos ninguém passará por ela.¹¹ Mas o pelicano e a coruja a possuirão, e o bufo e o corvo habitarão nela; e ele estenderá sobre ela o cordel de confusão e nível de vaidade.¹² Eles chamarão ao reino os seus nobres, mas nenhum haverá; e todos os seus príncipes não serão coisa alguma."
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+        document.querySelector(".apagar").textContent="<< Voltar"
+
+    }
+    function para7(){
+      document.getElementById("paralelo").style.marginTop = "430px";
+      document.querySelector(".v1").textContent="Salmos 77:4-6) ⁴ Sustentaste os meus olhos acordados; estou tão perturbado que não posso falar.⁵ Considerava os dias da antiguidade, os anos dos tempos antigos.⁶ De noite chamei à lembrança o meu cântico; meditei em meu coração, e o meu espírito esquadrinhou. "
+        document.querySelector(".v0").textContent="Salmos 38:10-12) ¹⁰ O meu coração dá voltas, a minha força me falta; quanto à luz dos meus olhos, ela me deixou.¹¹ Os meus amigos e os meus companheiros estão ao longe da minha chaga; e os meus parentes se põem à distância.¹² Também os que buscam a minha vida me armam laços e os que procuram o meu mal falam coisas que danificam, e imaginam astúcias todo o dia."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+
+      document.querySelector(".apagar").textContent="<< Voltar"
+
+    }
+    function para8(){
+      document.getElementById("paralelo").style.marginTop = "570px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Isaías 65:14-17) ¹⁴ Eis que os meus servos exultarão pela alegria de coração, mas vós gritareis pela tristeza de coração; e uivareis pelo quebrantamento de espírito.¹⁵ E deixareis o vosso nome aos meus eleitos por maldição; e o Senhor DEUS vos matará; e a seus servos chamará por outro nome.¹⁶ Assim que aquele que se bendisser na terra, se bendirá no Deus da verdade; e aquele que jurar na terra, jurará pelo Deus da verdade; porque já estão esquecidas as angústias passadas, e estão escondidas dos meus olhos.¹⁷ Porque, eis que eu crio novos céus e nova terra; e não haverá mais lembrança das coisas passadas, nem mais se recordarão."
+        document.querySelector(".v2").textContent="Atos 23:10-13) ¹⁰ E, havendo grande dissensão, o tribuno, temendo que Paulo fosse despedaçado por eles, mandou descer a soldadesca, para que o tirassem do meio deles, e o levassem para a fortaleza.¹¹ E na noite seguinte, apresentando-se-lhe o Senhor, disse: Paulo, tem ânimo; porque, como de mim testificaste em Jerusalém, assim importa que testifiques também em Roma.¹² E, quando já era dia, alguns dos judeus fizeram uma conspiração, e juraram, dizendo que não comeriam nem beberiam enquanto não matassem a Paulo.¹³ E eram mais de quarenta os que fizeram esta conjuração."
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+      document.querySelector(".apagar").textContent="<< Voltar"
+
+
+    }
+    function para9(){
+      document.getElementById("paralelo").style.marginTop = "650px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Salmos 42:1-3) ¹ Assim como o cervo brama pelas correntes das águas, assim suspira a minha alma por ti, ó Deus!² A minha alma tem sede de Deus, do Deus vivo; quando entrarei e me apresentarei ante a face de Deus?³ As minhas lágrimas servem-me de mantimento de dia e de noite, enquanto me dizem constantemente: Onde está o teu Deus?"
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para10(){
+      document.getElementById("paralelo").style.marginTop = "750px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Ezequiel 3:12-14) ¹² E levantou-me o Espírito, e ouvi por detrás de mim uma voz de grande estrondo, que dizia: Bendita seja a glória do SENHOR, desde o seu lugar.¹³ E ouvi o ruído das asas dos seres viventes, que tocavam umas nas outras, e o ruído das rodas defronte deles, e o sonido de um grande estrondo.¹⁴ Então o espírito me levantou, e me levou; e eu me fui amargurado, na indignação do meu Espírito; porém a mão do SENHOR era forte sobre mim. "
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para11(){
+      document.getElementById("paralelo").style.marginTop = "830px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Jó 8:6-10) ⁶ Se fores puro e reto, certamente logo despertará por ti, e restaurará a morada da tua justiça.⁷ O teu princípio, na verdade, terá sido pequeno, porém o teu último estado crescerá em extremo.⁸ Pois, eu te peço, pergunta agora às gerações passadas; e prepara-te para a inquirição de seus pais.⁹ Porque nós somos de ontem, e nada sabemos; porquanto nossos dias sobre a terra são como a sombra.¹⁰ Porventura não te ensinarão eles, e não te falarão, e do seu coração não tirarão palavras? "
+        document.querySelector(".v2").textContent="Isaías 40:6-8) ⁶ Uma voz diz: Clama; e alguém disse: Que hei de clamar? Toda a carne é erva e toda a sua beleza como a flor do campo.⁷ Seca-se a erva, e cai a flor, soprando nela o Espírito do Senhor. Na verdade o povo é erva.⁸ Seca-se a erva, e cai a flor, porém a palavra de nosso Deus subsiste eternamente. "
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para12(){
+      document.getElementById("paralelo").style.marginTop = "900px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent=""
+        document.querySelector(".v2").textContent="Êxodo 3:14-17) ¹⁴ E disse Deus a Moisés: EU SOU O QUE SOU. Disse mais: Assim dirás aos filhos de Israel: EU SOU me enviou a vós.¹⁵ E Deus disse mais a Moisés: Assim dirás aos filhos de Israel: O Senhor Deus de vossos pais, o Deus de Abraão, o Deus de Isaque, e o Deus de Jacó, me enviou a vós; este é meu nome eternamente, e este é meu memorial de geração em geração.¹⁶ Vai, e ajunta os anciãos de Israel e dize-lhes: O Senhor Deus de vossos pais, o Deus de Abraão, de Isaque e de Jacó, me apareceu, dizendo: Certamente vos tenho visitado e visto o que vos é feito no Egito.¹⁷ Portanto eu disse: Far-vos-ei subir da aflição do Egito à terra do cananeu, do heteu, do amorreu, do perizeu, do heveu e do jebuseu, a uma terra que mana leite e mel. "
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para13(){
+      document.getElementById("paralelo").style.marginTop = "980px";
+      document.querySelector(".v1").textContent="Isaías 40:1-3) ¹ Consolai, consolai o meu povo, diz o vosso Deus.² Falai benignamente a Jerusalém, e bradai-lhe que já a sua milícia é acabada, que a sua iniqüidade está expiada e que já recebeu em dobro da mão do Senhor, por todos os seus pecados.³ Voz do que clama no deserto: Preparai o caminho do Senhor; endireitai no ermo vereda a nosso Deus."
+        document.querySelector(".v0").textContent="Salmos 68:1-3) ¹ Levante-se Deus, e sejam dissipados os seus inimigos; fugirão de diante dele os que o odeiam.² Como se impele a fumaça, assim tu os impeles; assim como a cera se derrete diante do fogo, assim pereçam os ímpios diante de Deus.³ Mas alegrem-se os justos, e se regozijem na presença de Deus, e folguem de alegria. "
+        document.querySelector(".v2").textContent="Jeremias 29:9-13) ⁹ Porque eles vos profetizam falsamente em meu nome; não os enviei, diz o Senhor.¹⁰ Porque assim diz o SENHOR: Certamente que passados setenta anos em babilônia, vos visitarei, e cumprirei sobre vós a minha boa palavra, tornando a trazer-vos a este lugar.¹¹ Porque eu bem sei os pensamentos que tenho a vosso respeito, diz o Senhor; pensamentos de paz, e não de mal, para vos dar o fim que esperais.¹² Então me invocareis, e ireis, e orareis a mim, e eu vos ouvirei.¹³ E buscar-me-eis, e me achareis, quando me buscardes com todo o vosso coração. "
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para14(){
+      document.getElementById("paralelo").style.marginTop = "1050px";
+      document.querySelector(".v1").textContent="Lamentações 4:1-3) ¹ Como se escureceu o ouro! Como se mudou o ouro puro e bom! Como estão espalhadas as pedras do santuário sobre cada rua!² Os preciosos filhos de Sião, avaliados a puro ouro, como são agora reputados por vasos de barro, obra das mãos do oleiro!³ Até os chacais abaixam o peito, dão de mamar aos seus filhos; mas a filha do meu povo tornou-se cruel como os avestruzes no deserto. "
+        document.querySelector(".v0").textContent="Neemias 4:1-3) ¹ E sucedeu que, ouvindo Sambalate que edificávamos o muro, ardeu em ira, e se indignou muito; e escarneceu dos judeus.² E falou na presença de seus irmãos, e do exército de Samaria, e disse: Que fazem estes fracos judeus? Permitir-se-lhes-á isto? Sacrificarão? Acabá-lo-ão num só dia? Vivificarão dos montões do pó as pedras que foram queimadas?³ E estava com ele Tobias, o amonita, e disse: Ainda que edifiquem, contudo, vindo uma raposa, derrubará facilmente o seu muro de pedra. "
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para15(){
+      document.getElementById("paralelo").style.marginTop = "1120px";
+      document.querySelector(".v1").textContent="Isaías 59:18-20) ¹⁸ Conforme forem as obras deles, assim será a sua retribuição, furor aos seus adversários, e recompensa aos seus inimigos; às ilhas dará ele a sua recompensa.¹⁹ Então temerão o nome do Senhor desde o poente, e a sua glória desde o nascente do sol; vindo o inimigo como uma corrente de águas, o Espírito do Senhor arvorará contra ele a sua bandeira.²⁰ E virá um Redentor a Sião e aos que em Jacó se converterem da transgressão, diz o Senhor. "
+        document.querySelector(".v0").textContent="1 Reis 8:43-45) ⁴³ Ouve tu nos céus, assento da tua habitação, e faze conforme a tudo o que o estrangeiro a ti clamar, a fim de que todos os povos da terra conheçam o teu nome, para te temerem como o teu povo Israel, e para saberem que o teu nome é invocado sobre esta casa que tenho edificado.⁴⁴ Quando o teu povo sair à guerra contra o seu inimigo, pelo caminho por que os enviares, e orarem ao Senhor, para o lado desta cidade, que tu elegeste, e desta casa, que edifiquei ao teu nome,⁴⁵ Ouve, então, nos céus a sua oração e a sua súplica, e faze-lhes justiça. "
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<<Voltar"
+    }
+    function para16(){
+      document.getElementById("paralelo").style.marginTop = "1200px";
+      document.querySelector(".v1").textContent="Isaías 60:1-5) ¹ Levanta-te, resplandece, porque vem a tua luz, e a glória do SENHOR vai nascendo sobre ti;² Porque eis que as trevas cobriram a terra, e a escuridão os povos; mas sobre ti o Senhor virá surgindo, e a sua glória se verá sobre ti.³ E os gentios caminharão à tua luz, e os reis ao resplendor que te nasceu.⁴ Levanta em redor os teus olhos, e vê; todos estes já se ajuntaram, e vêm a ti; teus filhos virão de longe, e tuas filhas serão criadas ao teu lado.⁵ Então o verás, e serás iluminado, e o teu coração estremecerá e se alargará; porque a abundância do mar se tornará a ti, e as riquezas dos gentios virão a ti. "
+        document.querySelector(".v0").textContent="Salmos 147:1-4) ¹ Louvai ao SENHOR, porque é bom cantar louvores ao nosso Deus, porque é agradável; decoroso é o louvor.² O Senhor edifica a Jerusalém, congrega os dispersos de Israel.³ Sara os quebrantados de coração, e lhes ata as suas feridas.⁴ Conta o número das estrelas, chama-as a todas pelos seus nomes. "
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para17(){
+      document.getElementById("paralelo").style.marginTop = "1280px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent=""
+        document.querySelector(".v2").textContent=" "
+        document.querySelector(".v3").textContent="Neemias 1:6-11) ⁶ Estejam, pois, atentos os teus ouvidos e os teus olhos abertos, para ouvires a oração do teu servo, que eu hoje faço perante ti, dia e noite, pelos filhos de Israel, teus servos; e faço confissão pelos pecados dos filhos de Israel, que temos cometido contra ti; também eu e a casa de meu pai temos pecado.⁷ De todo nos corrompemos contra ti, e não guardamos os mandamentos, nem os estatutos, nem os juízos, que ordenaste a Moisés, teu servo.⁸ Lembra-te, pois, da palavra que ordenaste a Moisés, teu servo, dizendo: Vós transgredireis, e eu vos espalharei entre os povos.⁹ E vós vos convertereis a mim, e guardareis os meus mandamentos, e os cumprireis; então, ainda que os vossos rejeitados estejam na extremidade do céu, de lá os ajuntarei e os trarei ao lugar que tenho escolhido para ali fazer habitar o meu nome.¹⁰ Eles são teus servos e o teu povo que resgataste com a tua grande força e com a tua forte mão.¹¹ Ah! Senhor, estejam, pois, atentos os teus ouvidos à oração do teu servo, e à oração dos teus servos que desejam temer o teu nome; e faze prosperar hoje o teu servo, e dá-lhe graça perante este homem. Então era eu copeiro do rei. "
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para18(){
+      document.getElementById("paralelo").style.marginTop = "1430px";
+      document.querySelector(".v1").textContent="Isaías 43:20-22) ²⁰ Os animais do campo me honrarão, os chacais, e os avestruzes; porque porei águas no deserto, e rios no ermo, para dar de beber ao meu povo, ao meu eleito.²¹ A esse povo que formei para mim; o meu louvor relatarão.²² Contudo tu não me invocaste a mim, ó Jacó, mas te cansaste de mim, ó Israel."
+        document.querySelector(".v2").textContent="Romanos 15:3-5) ³ Porque também Cristo não agradou a si mesmo, mas, como está escrito: Sobre mim caíram as injúrias dos que te injuriavam.⁴ Porque tudo o que dantes foi escrito, para nosso ensino foi escrito, para que pela paciência e consolação das Escrituras tenhamos esperança.⁵ Ora, o Deus de paciência e consolação vos conceda o mesmo sentimento uns para com os outros, segundo Cristo Jesus, "
+        document.querySelector(".v0").textContent="Deuteronômio 31:18,19) ¹⁸ Esconderei, pois, totalmente o meu rosto naquele dia, por todo o mal que tiver feito, por se haverem tornado a outros deuses.¹⁹ Agora, pois, escrevei-vos este cântico, e ensinai-o aos filhos de Israel; ponde-o na sua boca, para que este cântico me seja por testemunha contra os filhos de Israel "
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para19(){
+      document.getElementById("paralelo").style.marginTop = "1550px";
+      document.querySelector(".v1").textContent="Salmos 11:1-5) ¹ No SENHOR confio; como dizeis à minha alma: Fugi para a vossa montanha como pássaro?² Pois eis que os ímpios armam o arco, põem as flechas na corda, para com elas atirarem, às escuras, aos retos de coração.³ Se forem destruídos os fundamentos, que poderá fazer o justo?⁴ O Senhor está no seu santo templo, o trono do Senhor está nos céus; os seus olhos estão atentos, e as suas pálpebras provam os filhos dos homens.⁵ O Senhor prova o justo; porém ao ímpio e ao que ama a violência odeia a sua alma."
+        document.querySelector(".v0").textContent="Deuteronômio 26:14-16) ¹⁴ Delas não comi no meu luto, nem delas nada tirei quando imundo, nem delas dei para os mortos; obedeci à voz do Senhor meu Deus; conforme a tudo o que me ordenaste, tenho feito.¹⁵ Olha desde a tua santa habitação, desde o céu, e abençoa o teu povo, a Israel, e a terra que nos deste, como juraste a nossos pais, terra que mana leite e mel.¹⁶ Neste dia, o Senhor teu Deus te manda cumprir estes estatutos e juízos; guarda-os pois, e cumpre-os com todo o teu coração e com toda a tua alma."
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para20(){
+      document.getElementById("paralelo").style.marginTop = "1650px";
+      document.querySelector(".v1").textContent=""
+        document.querySelector(".v0").textContent="Salmos 79:9-13"
+        document.querySelector(".v2").textContent="⁹ Ajuda-nos, ó Deus da nossa salvação, pela glória do teu nome; e livra-nos, e perdoa os nossos pecados por amor do teu nome.¹⁰ Porque diriam os gentios: Onde está o seu Deus? Seja ele conhecido entre os gentios, à nossa vista, pela vingança do sangue dos teus servos, que foi derramado.¹¹ Venha perante a tua face o gemido dos presos; segundo a grandeza do teu braço preserva aqueles que estão sentenciados à morte.¹² E torna aos nossos vizinhos, no seu regaço, sete vezes tanto da sua injúria com a qual te injuriaram, Senhor.¹³ Assim nós, teu povo e ovelhas de teu pasto, te louvaremos eternamente; de geração em geração cantaremos os teus louvores "
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para21(){
+      document.getElementById("paralelo").style.marginTop = "1730px";
+      document.querySelector(".v1").textContent="¹⁹ Mas tu, Senhor, não te alongues de mim. Força minha, apressa-te em socorrer-me.²⁰ Livra a minha alma da espada, e a minha predileta da força do cão.²¹ Salva-me da boca do leão; sim, ouviste-me, das pontas dos bois selvagens.²² Então declararei o teu nome aos meus irmãos; louvar-te-ei no meio da congregação.²³ Vós, que temeis ao Senhor, louvai-o; todos vós, semente de Jacó, glorificai-o; e temei-o todos vós, semente de Israel."
+        document.querySelector(".v0").textContent="Salmos 22:19-23"
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para22(){
+      document.getElementById("paralelo").style.marginTop = "1820px";
+      document.querySelector(".v1").textContent="¹² Eu fiz a terra, e criei nela o homem; eu o fiz; as minhas mãos estenderam os céus, e a todos os seus exércitos dei as minhas ordens.¹³ Eu o despertei em justiça, e todos os seus caminhos endireitarei; ele edificará a minha cidade, e soltará os meus cativos, não por preço nem por presente, diz o Senhor dos Exércitos.¹⁴ Assim diz o SENHOR: O trabalho do Egito, e o comércio dos etíopes e dos sabeus, homens de alta estatura, passarão para ti, e serão teus; irão atrás de ti, virão em grilhões, e diante de ti se prostrarão; far-te-ão as suas súplicas, dizendo: Deveras Deus está em ti, e não há nenhum outro deus."
+        document.querySelector(".v0").textContent="Isaías 45:12-14"
+        document.querySelector(".v2").textContent=""
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para23(){
+      document.getElementById("paralelo").style.marginTop = "1910px";
+      document.querySelector(".v1").textContent="¹⁹ Deus guarda a sua violência para seus filhos, e dá-lhe o pago, para que o conheça.²⁰ Seus olhos verão a sua ruína, e ele beberá do furor do Todo-Poderoso.²¹ Por que, que prazer teria na sua casa, depois de morto, cortando-se-lhe o número dos seus meses?²² Porventura a Deus se ensinaria ciência, a ele que julga os excelsos?²³ Um morre na força da sua plenitude, estando inteiramente sossegado e tranqüilo."
+        document.querySelector(".v0").textContent="Jó 21:19-23"
+        document.querySelector(".v2").textContent="Salmos 89:44-47"
+        document.querySelector(".v3").textContent="⁴⁴ Fizeste cessar a sua glória, e deitaste por terra o seu trono.⁴⁵ Abreviaste os dias da sua mocidade; cobriste-o de vergonha. (Selá.)⁴⁶ Até quando, Senhor? Acaso te esconderás para sempre? Arderá a tua ira como fogo?⁴⁷ Lembra-te de quão breves são os meus dias; por que criarias debalde todos os filhos dos homens?"
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+    function para24(){
+      document.getElementById("paralelo").style.marginTop = "1980px";
+      document.querySelector(".v1").textContent="Isaías 38:9-11) ⁹ O escrito de Ezequias, rei de Judá, de quando adoeceu e sarou de sua enfermidade:¹⁰ Eu disse: No cessar de meus dias ir-me-ei às portas da sepultura; já estou privado do restante de meus anos.¹¹ Disse: Não verei ao Senhor, o Senhor na terra dos viventes; jamais verei o homem com os moradores do mundo."
+        document.querySelector(".v0").textContent="Jó 36:24-27) ²⁴ Lembra-te de engrandecer a sua obra, que os homens contemplam.²⁵ Todos os homens a vêem, e o homem a enxerga de longe.²⁶ Eis que Deus é grande, e nós não o compreendemos, e o número dos seus anos não se pode esquadrinhar.²⁷ Porque faz miúdas as gotas das águas que, do seu vapor, derramam a chuva,"
+        document.querySelector(".v2").textContent="Habacuque 1:9-13) ⁹ Eles todos virão para fazer violência; os seus rostos buscarão o vento oriental, e reunirão os cativos como areia.¹⁰ E escarnecerão dos reis, e dos príncipes farão zombaria; eles se rirão de todas as fortalezas, porque amontoarão terra, e as tomarão.¹¹ Então muda a sua mente, e seguirá, e se fará culpado, atribuindo este seu poder ao seu deus.¹² Não és tu desde a eternidade, ó Senhor meu Deus, meu Santo? Nós não morreremos. Ó Senhor, para juízo o puseste, e tu, ó Rocha, o fundaste para castigar.¹³ Tu és tão puro de olhos, que não podes ver o mal, e a opressão não podes contemplar. Por que olhas para os que procedem aleivosamente, e te calas quando o ímpio devora aquele que é mais justo do que ele?"
+        document.querySelector(".v3").textContent=""
+        document.querySelector(".v4").textContent=""
+        document.querySelector(".v5").textContent=""
+        document.querySelector(".v6").textContent=""
+
+      document.querySelector(".apagar").textContent="<< Voltar" 
+    }
+
+    function apagar(){
+     
+     document.querySelector(".v1").textContent=""
+     document.querySelector(".v0").textContent=""
+     document.querySelector(".v2").textContent=""
+     document.querySelector(".v3").textContent=""
+     document.querySelector(".v4").textContent=""
+     document.querySelector(".v5").textContent=""
+     document.querySelector(".v6").textContent=""
+     document.querySelector(".apagar").textContent=""
+    
+
+
+
+ }
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
